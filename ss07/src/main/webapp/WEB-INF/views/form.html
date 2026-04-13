@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form th:action="@{/handle-add}" method="post" th:object="${student}">
+<form th:action="@{/handle-add}" method="post" th:object="${student}" enctype="multipart/form-data">
     <!-- Trường dành cho id -->
     <!-- Trong th:field có các thuộc tính id , name, value -->
     <div class="form-group">
@@ -37,6 +37,10 @@
             <option value="FEMALE">FEMALE</option>
             <option value="OTHER">OTHER</option>
         </select>
+    </div>
+<!-- DTO - Data Transform Object Req vs Resp vs Entity -->
+    <div class="form-group">
+        <input type="file" th:field="*{avatar}" id="">
     </div>
     
     <!-- submit -->

@@ -5,15 +5,17 @@ public class Student {
     private String fullName;
     private Integer age;
     private Gender gender;
+    private String avatar;
 
     public Student() {
     }
 
-    public Student(Long id, String fullName, Integer age, Gender gender) {
+    public Student(Long id, String fullName, Integer age, Gender gender, String avatar) {
         this.id = id;
         this.fullName = fullName;
         this.age = age;
         this.gender = gender;
+        this.avatar = avatar;
     }
 
     public Long getId() {
@@ -46,6 +48,14 @@ public class Student {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     @Override
