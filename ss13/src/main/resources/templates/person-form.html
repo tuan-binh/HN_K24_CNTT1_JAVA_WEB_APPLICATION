@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/save}" method="post" th:object="${person}">
+    <div>
+        <label for="">Name</label> <br>
+        <input type="text" th:field="*{fullName}">
+    </div>
+    <div>
+        <label for="">Thinking</label>
+        <input type="radio" th:field="*{isThinking}" value="true" > Đang suy nghĩ
+        <input type="radio" th:field="*{isThinking}" value="false"> Đang ngủ
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+</form>
+
+</body>
+</html>

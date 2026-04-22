@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a th:href="@{/add}">Thêm mới</a>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Thinking</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each=" p : ${persons}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.fullName}"></td>
+        <td th:text="${p.isThinking} ? 'Đang suy nghĩ' : 'Đang ngủ'"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
