@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/papa_bank}" method="post">
+    <div>
+        <!-- Hiển thị danh sách account có trong hệ thống và lựa chọn bằng select option -->
+        <label for="">Sender ID</label> <br>
+        <input type="text" name="senderId">
+    </div>
+    <div>
+        <!-- Hiển thị danh sách account có trong hệ thống và lựa chọn bằng select option -->
+        <label for="">Receive ID</label> <br>
+        <input type="text" name="receiveId">
+    </div>
+    <div>
+        <label for="">Amount</label> <br>
+        <input type="text" name="amount">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
